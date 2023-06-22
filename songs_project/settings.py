@@ -31,7 +31,7 @@ DEBUG = 'RENDER' not in os.environ
 ALLOWED_HOSTS = ['localhost', 'songs-app-backend.onrender.com', '127.0.0.1']
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 'https://app-de-canciones.vercel.app',
+    'http://localhost:3000', 'https://app-de-canciones.vercel.app', 'http://127.0.0.1:5173',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False
