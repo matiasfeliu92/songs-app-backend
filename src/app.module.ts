@@ -6,7 +6,6 @@ import { AppService } from './app.service';
 import { SongsModule } from './songs/songs.module';
 import { ArtistsModule } from './artists/artists.module';
 import { GenresModule } from './genres/genres.module';
-import { keys } from './keys';
 
 @Module({
   imports: [
