@@ -1,3 +1,6 @@
 cancion
 __pycache__
 .env
+node_modules
+dist
+keys.ts
