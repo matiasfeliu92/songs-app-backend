@@ -15,11 +15,11 @@ class Artist(models.Model):
 
 class Song(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
+    artist = models.ForeignKey(Artist, on_delete=models.CASCADE, max_length=200)
     album = models.CharField(max_length=200)
     duration = models.CharField(max_length=10)
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-    image = models.CharField(max_length=300)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE, max_length=200)
+    image = models.CharField(max_length=500)
     you_tube = models.CharField(max_length=300)
     pub_date = models.DateTimeField(auto_now_add=True)
 
