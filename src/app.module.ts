@@ -15,7 +15,7 @@ import { keys } from './keys';
       host: process.env.DB_HOST || 'localhost',
       port: parseInt(process.env.DB_PORT) || 5432,
       username: process.env.DB_USER || 'postgres',
-      password: process.env.DB_PASS || keys.dbPassword,
+      password: process.env.DB_PASS || 'francia',
       database: process.env.DB_NAME || 'songs_local',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
