@@ -18,6 +18,15 @@ export class SongsController {
     return await this.songService.getAll();
   }
 
+  @Get('/:id')
+  async findOneById(@Param('id') id: number) {
+    const song = await this.songService.getOneById(id);
+    if (!song) {
+      throw new NotFoundException('Song not found');
+    }
+    return song;
+  }
+
   @Get('/:title')
   async findOneByTitle(@Param('title') title: string) {
     const song = await this.songService.getOneByName(title);

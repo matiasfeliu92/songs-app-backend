@@ -8,7 +8,7 @@ import { Genre } from 'src/genres/entities/genre.entity';
   expression: (connection: any) =>
     connection
       .createQueryBuilder()
-      .select('song.id', 'song_id')
+      .select('song.id', 'id')
       .addSelect('song.title', 'title')
       .addSelect('artist.name', 'artist')
       .addSelect('song.album', 'album')
@@ -22,6 +22,9 @@ import { Genre } from 'src/genres/entities/genre.entity';
       .orderBy('title'),
 })
 export class AllSongs {
+  @ViewColumn()
+  id: number;
+
   @ViewColumn()
   title: string;
 
