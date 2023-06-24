@@ -26,9 +26,9 @@ export class SongsService {
     return this.allSongRepository.find();
   }
 
-  // async getOneById(id: number): Promise<AllSongs> {
-  //   return this.allSongRepository.findOne({ where: { id } });
-  // }
+  async getOneById(id: number): Promise<AllSongs> {
+    return this.allSongRepository.findOne({ where: { id } });
+  }
 
   async getOneByName(title: string): Promise<AllSongs> {
     return this.allSongRepository.findOne({ where: { title } });
